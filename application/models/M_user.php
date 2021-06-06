@@ -24,6 +24,10 @@ class M_user extends CI_Model{
     $this->db->update('tb_user',$data_user);
   }
 
+  function tambah_data($data_user){
+    $this->db->insert('tb_user',$data_user);
+  }
+
 }
 
  ?>

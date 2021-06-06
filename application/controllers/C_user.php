@@ -9,8 +9,6 @@ class C_user extends CI_Controller {
 			$this->load->model('M_user');
 	}
 
-
-
 	public function index()
 	{
 		$data['user'] = $this->M_user->tampil_data();
@@ -51,6 +49,29 @@ class C_user extends CI_Controller {
 	{
 		$kode_user = array('id_user' => $id_user);
 		$this->M_user->hapus_data($kode_user);
+		redirect('C_user');
+	}
+
+	public function tambah()
+	{
+		$this->load->view('template/header');
+		$this->load->view('admin/v_user_tambah');
+		$this->load->view('template/footer');
+	}
+
+	public function tambah_up()
+	{
+	  $username = $this->input->post('username');
+		$password = $this->input->post('password');
+		$status = $this->input->post('status');
+
+		$data_user = array(
+			'username'=>$username,
+			'password'=>md5($password),
+			'status'=>$status
+		);
+
+		$this->M_user->tambah_data($data_user);
 		redirect('C_user');
 	}
 

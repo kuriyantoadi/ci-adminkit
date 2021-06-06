@@ -8,6 +8,7 @@
           <div class="card-header">
             <h4 style="margin: 30px"><center>Data User</h4>
 
+          <a href="<?= base_url() ?>c_user/tambah" class="btn btn-primary btn-sm" style="margin-bottom: 20px">Tambah</a>
           <table class="table table-bordered table-hover" id="example">
             <thead>
             <tr>
@@ -36,8 +37,8 @@
               <td><center><?= $row->username; ?></td>
               <td><center><?= $row->status; ?></td>
               <td><center>
-                <a href="<?php echo site_url('C_user/hapus/'.$row->id_user); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Anda yakin menhapus data ini ?')">Hapus</a>
-                <a href="<?php echo site_url('C_user/edit/'.$row->id_user); ?>" class="btn btn-sm btn-info">Edit</a></td>
+                <a href="<?php echo site_url('c_user/hapus/'.$row->id_user); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Anda yakin menhapus data ini ?')">Hapus</a>
+                <a href="<?php echo site_url('c_user/edit/'.$row->id_user); ?>" class="btn btn-sm btn-info">Edit</a></td>
               </td>
             </tr>
             <?php } ?>
