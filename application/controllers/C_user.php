@@ -7,6 +7,12 @@ class C_user extends CI_Controller {
 	{
 			parent::__construct();
 			$this->load->model('M_user');
+
+			// session login
+			if ($this->session->userdata('admin') != true) {
+				$url = base_url('c_login');
+				redirect($url);
+			}
 	}
 
 	public function index()

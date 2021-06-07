@@ -13,7 +13,7 @@
   <br>Awal :
   <br>`  $autoload['libraries'] = array('');`
   <br>Edit :
-  <br>`  $autoload['libraries'] = array('database');`
+  <br>`  $autoload['libraries'] = array('database','session');`
 
   **4. application/config/database.php**
   <br>`'hostname' => 'localhost',`
@@ -48,3 +48,6 @@
   <br>`application/view/v_user_tambah.php` -> File untuk tambah user
   <br>`application/controllers/C_user.php` -> File controller User
   <br>`application/Models/M_user.php` -> File Model User
+
+  **11. Controller/C_page**
+  <br>`application/controllers/C_page.php` -> baris ke-11 tambah session login
